@@ -6,7 +6,7 @@ FROM ${DOCKER_REGISTRY}/qnib/alplain-init${DOCKER_IMG_TAG}${DOCKER_IMG_HASH}
 # Inspired by official golang image
 # > https://github.com/docker-library/golang/blob/132cd70768e3bc269902e4c7b579203f66dc9f64/1.8/alpine/Dockerfile
 RUN apk add --no-cache ca-certificates
-ARG GOLANG_VERSION=1.9
+ARG GOLANG_VERSION=1.9.2
 ARG GOLANG_SRC_URL=https://golang.org/dl/go$GOLANG_VERSION.src.tar.gz
 RUN set -ex \
 	&& apk add --no-cache --virtual .build-deps \
